@@ -1,0 +1,73 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="typeLabel"
+            type="String" />
+
+        <variable
+            name="progress"
+            type="int" />
+
+        <variable
+            name="maxProgress"
+            type="int" />
+
+        <variable
+            name="progressColor"
+            type="int" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:id="@+id/label"
+            android:layout_marginHorizontal="8dp"
+            android:text="@{typeLabel}"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:layout_width="match_parent"
+                android:paddingHorizontal="8dp"
+                app:customColor="@{progressColor}"
+                app:trackColor="@color/white"
+                android:layout_marginHorizontal="8dp"
+                app:trackCornerRadius="8dp"
+                android:progress="@{progress}"
+                android:max="@{maxProgress}"
+                app:trackThickness="20dp"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                app:minProgress="@{progress}"
+                app:maxProgress="@{maxProgress}"
+                android:layout_marginHorizontal="50dp"
+                android:textColor="@color/black"
+
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

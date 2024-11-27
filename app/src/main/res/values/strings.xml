@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="symbol_text">%1$s %2$s</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="progress">%1$s/%2$s</string>
+
+</resources>
